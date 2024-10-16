@@ -1,0 +1,16 @@
+<div class="data-binding">
+    <h1>Data Binding</h1>
+    <div class="one-way binding">
+        <h2 >{{concept1}}</h2>
+        <h3 [innerText]="designation"></h3>
+        <h4>{{firstName}} {{lastName}}</h4>
+    </div>
+    <div class="two-way binding">
+        <h2 >{{concept2}}</h2>
+        
+        <h3>{{name}}</h3>
+        <input type ="text" [(ngModel)]="name" placeholder="Enter some letters">
+    </div>
+
+    
+</div>
