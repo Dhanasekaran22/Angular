@@ -1,0 +1,21 @@
+h1{
+    color:red;
+}
+
+.Directives h2{
+    color:#FFD700;
+}
+
+.movies-table table,th,td {
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 5px;
+    text-align: left;
+}
+
+.movies-table table{
+    margin-left: 3%;
+}

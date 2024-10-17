@@ -14,4 +14,40 @@ export class DataBindingComponent {
   concept2="This is Two way Binding"
   name="Rahul";
 
+  stringInterpolation="This is String Interpolation";
+  color="brown";
+
+  getTitle(){
+    return this.stringInterpolation;
+  }
+
+  getMaximumNumber(first:number,second:number){
+    return Math.max(first,second);
+
+  }
+
+  isDisabledForPropertyBinding=true;
+  count=0;
+  
+  onClick(){
+    this.count++;
+  }
+
+  propertyBindingInEventBinding:string="";
+  isDisabledForEventBinding=true;
+  copyVariable:string="";
+
+  isValue(event:any){
+    this.propertyBindingInEventBinding=(event.target as HTMLInputElement).value;
+
+    if(this.propertyBindingInEventBinding.length>1){
+      this.isDisabledForEventBinding=false;
+    }
+    else{
+      this.isDisabledForEventBinding= true;
+    }
+  }
+ 
 }
+
+

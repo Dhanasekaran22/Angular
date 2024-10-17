@@ -1,16 +1,47 @@
 <div class="data-binding">
     <h1>Data Binding</h1>
+
     <div class="one-way binding">
-        <h2 >{{concept1}}</h2>
-        <h3 [innerText]="designation"></h3>
-        <h4>{{firstName}} {{lastName}}</h4>
-    </div>
-    <div class="two-way binding">
-        <h2 >{{concept2}}</h2>
-        
-        <h3>{{name}}</h3>
-        <input type ="text" [(ngModel)]="name" placeholder="Enter some letters">
+        <h2>{{concept1}}</h2>
+        <p [innerText]="designation"></p>
+        <p>{{firstName}} {{lastName}}</p>
     </div>
 
+
+    <div class="two-way binding">
+        <h2>{{concept2}}</h2>
+        <p>{{name}}</p>
+        <input type="text" [(ngModel)]="name" placeholder="Enter some letters">
+    </div>
+
+</div>
+
+
+<div class="binding string-interpolation">
+    <h2>String interpolation</h2>
+    <p>{{getTitle()}}</p>
+    <p>100 x 80 = {{100*80}}</p>
+    <p>Largest Number: {{getMaximumNumber(100,200)}}</p>
+
+    <p style.color="{{color}}">This is {{color}} color</p>
+</div>
+
+
+<div class="binding property-binding">
+    <h2>property binding </h2>
+    <input type="text"   placeholder="Type Something">
+    <button [disabled]="isDisabledForPropertyBinding">click</button>
+    <p [innerText]=" 'This is '+'Property binding'"></p>
     
+</div>
+
+
+<div class="binding event-binding">
+    <h2>Event binding </h2>
+    <input type="text"  (input)="isValue($event); copyVariable=$any($event.target).value ">
+    <button (click)="onClick()" [disabled] ="isDisabledForEventBinding">click</button>
+    <p>You Clicked {{count}} Times</p>
+    <p>With the function: {{propertyBindingInEventBinding}}</p>
+    <p>Without the function: {{copyVariable}}</p>
+    <p [innerHTML]="'<b>In Event binding, there is '+'Property binding</b>'"></p>
 </div>

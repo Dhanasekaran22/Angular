@@ -1,0 +1,41 @@
+<h1>Directives</h1>
+
+<div class="Directives structured-directives">
+    <h2> Structured Directives</h2>
+    <div class="list">
+        <h2 style="color:black"> Using List</h2>
+        <h3>List of Movies and Director</h3>
+        <!-- <ul>
+            <li *ngFor="let movie of movies">
+                {{movie}}
+            </li>
+        </ul> -->
+
+        <ul>
+            <li *ngFor="let Directors of movieDirector">
+                {{Directors.movie}} - {{Directors.director}}
+            </li>
+        </ul>
+
+    </div>
+    <br>
+    <div class="movies-table">
+        <h2 style="color: black;"> Using Table</h2>
+        <table >
+            <thead>
+                <tr>
+                    <th>Movies</th>
+                    <th>Director</th>
+                    <th>Hero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movieDetails of movieDirector">
+                    <td>{{movieDetails.movie}}</td>
+                    <td>{{movieDetails.director}}</td>
+                    <td>{{movieDetails.hero}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
