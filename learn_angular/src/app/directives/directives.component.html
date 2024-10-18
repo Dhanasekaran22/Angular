@@ -1,41 +1,89 @@
+
 <h1>Directives</h1>
 
 <div class="Directives structured-directives">
-    <h2> Structured Directives</h2>
-    <div class="list">
-        <h2 style="color:black"> Using List</h2>
-        <h3>List of Movies and Director</h3>
-        <!-- <ul>
+    <h2> Structured Directives</h2><br>
+    <h3>This is ngFor directive</h3>
+
+    <div class="ngFor-directive">
+
+        <div class="list">
+            <h4>List of Movies and Director</h4>
+            <!-- <ul>
             <li *ngFor="let movie of movies">
                 {{movie}}
             </li>
         </ul> -->
 
-        <ul>
-            <li *ngFor="let Directors of movieDirector">
-                {{Directors.movie}} - {{Directors.director}}
-            </li>
-        </ul>
+            <ul>
+                <li *ngFor="let Directors of movieDirector; ">
+                    {{Directors.movie}} - {{Directors.director}}
+                </li>
+            </ul>
 
+        </div>
+
+        
+        <div class="movies-table">
+            <h2 style="color: black;"> Using Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.no</th>
+                        <th>Movies</th>
+                        <th>Director</th>
+                        <th>Hero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr [ngClass]='{"bg-warning":f,"bg-info":l}'
+                        *ngFor="let movieDetails of movieDirector; let i=index, let o=odd,let e=even; let f=first,let l=last;">
+                        <td>{{i+1}}</td>
+                        <td>{{movieDetails.movie}}</td>
+                        <td>{{movieDetails.director}}</td>
+                        <td>{{movieDetails.hero}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div><br><br>
+
+    <div class="ngSwitch-directory">
+        <h3>This is ngSwitch Directory</h3>
+
+        <input type="text" [(ngModel)]="num">
+        <div [ngSwitch]="num">
+            <div *ngSwitchCase="1">One</div>
+            <div *ngSwitchCase="2">Two</div>
+            <div *ngSwitchCase="3">Three</div>
+            <div *ngSwitchCase="4">Four</div>
+            <div *ngSwitchCase="5">Five</div>
+        </div> <br>
+
+       
+        <h3 style="color: black;">Another Example</h3>
+
+       
+         Select the colour : <select [(ngModel)]="selectedOption">
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+        </select>
+        <div [ngSwitch]="selectedOption">
+            <div *ngSwitchCase="'Red'" style="color:red">You selected <b>Red</b> Colour</div>
+            <div *ngSwitchCase="'Green'" style="color:green">You selected <b>Green</b> colour</div>
+            <div *ngSwitchCase="'Blue'" style="color:blue">You selected <b>Blue</b> colour</div>
+        </div>
+
+    </div><br><br>
+
+    <div class="ngIf-directory">
+        <h3>This is ngIf Directory</h3>
+        
     </div>
-    <br>
-    <div class="movies-table">
-        <h2 style="color: black;"> Using Table</h2>
-        <table >
-            <thead>
-                <tr>
-                    <th>Movies</th>
-                    <th>Director</th>
-                    <th>Hero</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let movieDetails of movieDirector">
-                    <td>{{movieDetails.movie}}</td>
-                    <td>{{movieDetails.director}}</td>
-                    <td>{{movieDetails.hero}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
+
+
+
 </div>

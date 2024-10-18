@@ -16,4 +16,7 @@ export class DirectivesComponent {
     {movie:"Vada Chennai",director:"Vetrimaran",hero:"Dhanush"},
     {movie:"Doctor",director:"Nelson DilipKumar",hero:"Sivakarthikeyan"}
   ]
+
+  num=0;
+  selectedOption:string="";
 }

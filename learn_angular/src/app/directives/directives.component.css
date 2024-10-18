@@ -6,6 +6,10 @@ h1{
     color:#FFD700;
 }
 
+.Directives h3{
+    color:#8B4513;
+}
+
 .movies-table table,th,td {
     border:1px solid black;
     border-collapse: collapse;
