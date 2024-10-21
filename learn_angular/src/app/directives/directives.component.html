@@ -1,9 +1,8 @@
-
 <h1>Directives</h1>
 
 <div class="Directives structured-directives">
     <h2> Structured Directives</h2><br>
-    <h3>This is ngFor directive</h3>
+    <h3>This is ngFor Directive</h3>
 
     <div class="ngFor-directive">
 
@@ -23,7 +22,7 @@
 
         </div>
 
-        
+
         <div class="movies-table">
             <h2 style="color: black;"> Using Table</h2>
             <table>
@@ -50,7 +49,7 @@
     </div><br><br>
 
     <div class="ngSwitch-directory">
-        <h3>This is ngSwitch Directory</h3>
+        <h3>This is ngSwitch Directive</h3>
 
         <input type="text" [(ngModel)]="num">
         <div [ngSwitch]="num">
@@ -61,11 +60,11 @@
             <div *ngSwitchCase="5">Five</div>
         </div> <br>
 
-       
+
         <h3 style="color: black;">Another Example</h3>
 
-       
-         Select the colour : <select [(ngModel)]="selectedOption">
+
+        Select the colour : <select [(ngModel)]="selectedOption">
             <option value="Red">Red</option>
             <option value="Green">Green</option>
             <option value="Blue">Blue</option>
@@ -79,11 +78,110 @@
     </div><br><br>
 
     <div class="ngIf-directory">
-        <h3>This is ngIf Directory</h3>
-        
-    </div>
+        <h3>This is ngIf Directive</h3>
+
+        <label for="checkbox" value="showMe">Checked </label>
+        <input type="checkbox" [(ngModel)]="showMe">
+        <!-- <p *ngIf="showMe; else elseBlock">It is Ticked</p> --> <!--these twos are also valid-->
+        <!-- <p *ngIf="!showMe">It is Unticked</p> -->
+
+        <!--This is Else Block-->
+
+        <div class="if-else directory" *ngIf="showMe; then thenBlock; else elseBlock">
+
+        </div>
+        <ng-template #thenBlock>
+            <p>It is Ticked</p>
+        </ng-template>
+        <ng-template #elseBlock>
+            <p>It is Unticked</p>
+        </ng-template>
+
+        <div class="example">
+            <h4>Items</h4>
+            <button (click)="showItems=!showItems">
+                {{showItems ? 'Hide Items' : 'Show Items'}}
+            </button>
+            <ul *ngIf="showItems">
+                <li *ngFor="let item of items">
+                    {{item}}
+                </li>
+            </ul>
+            <p *ngIf="!showItems">No Items to display, Click the Button to show items</p>
+        </div>
+    </div><br>
+
+    <div class="ng-class directive">
+        <h2>Attribute Directive</h2>
+        <h3>This is ngClass Directive</h3>
+
+        <!--  <div [ngClass]="['primary:'enableColor','fonts']"></div>           multiple styles in array! -->
+
+        <input type="checkbox" [(ngModel)]="enableColor"> Change Color
+        <input type="checkbox" [(ngModel)]="changeFont"> Change font
+        <input type="checkbox" [(ngModel)]="enableItalic"> Italic
+
+        <div [ngClass]="{          
+            'primary':enableColor,
+            'fonts':changeFont,          
+            'italics':enableItalic
+        }">
+            <p>To learn Angular</p>
+        </div>
+
+
+        <input type="checkbox" [(ngModel)]="isChecked">Background Color
+        <div [ngClass]="{
+            'background-checked':isChecked,
+            'background-unchecked':!isChecked
+
+        }">
+            Background Color Changes Here
+        </div><br>
+
+
+        <div class="ng-style Directive">
+            <h3>This is ngStyle Directive </h3>
+
+            <!-- <div [ngStyle]="{'color':status=='Failure' ? 'red' : 'purple'}">
+                <h5>Sample Text</h5>
+            </div> -->
+
+            <div [ngStyle]="{
+                'color':'purple',
+                'font-size':'20px',
+                'font-weight':'bold',
+            }">
+                <p>Sample Text</p>
+            </div>
+            <input type="text" [(ngModel)]="inputColor" placeholder="color name or color code">
+            <div [ngStyle]="{'color':inputColor}">
+                <h4>This is Customized Input Color</h4>
+            </div>
+
+
+            <div>
+                <label for="shadowSlider">Box Shadow Intensity: </label>
+                <input type="range" id="shadowSlider" min="0" max="50" [(ngModel)]="shadowIntensity">
+
+                <label for="borderRadiusSlider">Border Radius: </label>
+                <input type="range" id="borderRadiusSlider" min="0" max="50" [(ngModel)]="borderRadius">
+            </div>
+
+            <div [ngStyle]="{
+                'box-shadow':'0 0'+shadowIntensity+'px rgba(0,0,0,0.5)',
+                'border-radius':borderRadius+'px',
+                'width':'200px',
+                'height':'100px',
+                'background-color':'lightgray',
+                'color':'purple',
+                'display':'flex',
+                'justify-content':'center',
+                'align-items':'center'
+            }">
+                This is the box
+            </div>
 
 
 
-
-</div>
+        </div>

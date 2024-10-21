@@ -14,7 +14,7 @@ export class DataBindingComponent {
   concept2="This is Two way Binding"
   name="Rahul";
 
-  stringInterpolation="This is String Interpolation";
+  stringInterpolation="This is String Interpolation and it is called by method";
   color="brown";
 
   getTitle(){

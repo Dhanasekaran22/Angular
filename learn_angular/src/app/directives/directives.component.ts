@@ -19,4 +19,22 @@ export class DirectivesComponent {
 
   num=0;
   selectedOption:string="";
+
+  showMe=true;
+  show=false;
+
+  showItems:boolean=false;
+  items:string[]=["item-1","item-2","item-3"]
+
+  enableColor=false;
+  changeFont=false;
+  enableItalic=false;
+
+  isChecked=false;
+
+  status="Success";
+  inputColor="";
+
+  shadowIntensity=0;
+  borderRadius=0;
 }
