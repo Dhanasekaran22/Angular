@@ -1,0 +1,49 @@
+<div class="pipes">
+    <h1 style="color:red">Pipes</h1>
+
+    <div class="date-pipe">
+        <h2>Date Pipe</h2>
+        <p>Unformatted Date : {{toDate}}</p>
+        <p>Formatted Date : {{toDate | date}}</p>
+        <p>Medium : {{toDate | date:'medium'}}</p>
+        <p>Short : {{toDate | date:'short'}}</p>
+        <p>Full Date : {{toDate | date:'fullDate'}}</p>
+        <p>Long Date : {{toDate | date:'longDate'}}</p>
+    
+    </div><br>
+
+    <div class="case-pipe">
+        <h2>Case Pipe</h2>
+        <p>Original Text : {{message}}</p>
+        <p>UpperCase : {{message | uppercase}}</p>
+        <p>LowerCase : {{message | lowercase}}</p>
+    </div><br>
+
+    <div class="slice">
+        <h2>Slice Pipe</h2>
+        <p>Original Text : {{message}}</p>
+        
+        <p>Sliced Text : {{message | slice:5:7}} </p>
+        <p>Sliced Text : {{message | slice:-13}} </p>
+    </div><br>
+
+    <div class="number-pipes">
+        <h2>Number Pipe</h2>
+        <p>Original Number : {{ 999.567865}}</p>
+        <p>Default Number : {{999.567865 | number }}</p>
+        <p>Maximum Point : {{999.567865 | number: '1.4'}}</p>
+        <p>Atleast and Maximum Point : {{999.567865 | number: '2.2-2'}}</p>
+
+    </div><br>
+
+    <div class="other-pipes">
+        <h2>Other Pipes</h2>
+        <p>Currency : {{ '1000' | currency : 'USD'}}</p>
+        <p>Without Currency Symbol : {{ '1000' | currency : 'USD':false}}</p>
+        <p>Percent : {{0.25 | percent}}</p>
+    </div><br>
+
+    <div class="async-pipes">
+        
+    </div>
+</div>

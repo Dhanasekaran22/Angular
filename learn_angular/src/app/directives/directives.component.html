@@ -111,7 +111,8 @@
         </div>
     </div><br>
 
-    <div class="ng-class directive">
+    <div class="Attribute directive">
+
         <h2>Attribute Directive</h2>
         <h3>This is ngClass Directive</h3>
 
@@ -161,10 +162,10 @@
 
 
             <div>
-                <label for="shadowSlider">Box Shadow Intensity: </label>
+                <label for="shadowSlider">Box Shadow Intensity : </label>
                 <input type="range" id="shadowSlider" min="0" max="50" [(ngModel)]="shadowIntensity">
 
-                <label for="borderRadiusSlider">Border Radius: </label>
+                <label for="borderRadiusSlider">Border Radius : </label>
                 <input type="range" id="borderRadiusSlider" min="0" max="50" [(ngModel)]="borderRadius">
             </div>
 
@@ -182,6 +183,18 @@
                 This is the box
             </div>
 
+        </div><br>
 
+        <div class="ng-Custom-Directive">
+
+            <div appCustomDirective>
+                <p >Hover over this text to change its background Color!</p>  <!--we also use the custom directive in p tag also -->
+            </div>
+
+            <div appCard>
+                <h4>Card title</h4>
+                <p>This is some content inside the card</p>
+            </div><br><br>
 
         </div>
+
