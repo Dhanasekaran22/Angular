@@ -1,3 +1,4 @@
+import { Renderer2 } from '@angular/core';
 import { CardDirective } from './card.directive';
 
 describe('CardDirective', () => {

@@ -39,9 +39,9 @@
 <div class="binding event-binding">
     <h2>Event binding </h2>
     <input type="text"  (input)="isValue($event); copyVariable=$any($event.target).value ">
-    <button (click)="onClick()" [disabled] ="isDisabledForEventBinding">click</button>
+    <button (click)="onClick()" [disabled] ="notNull">click</button>
     <p>You Clicked {{count}} Times</p>
-    <p>With the function: {{propertyBindingInEventBinding}}</p>
+    <p>With the function: {{inputText}}</p>
     <p>Without the function: {{copyVariable}}</p>
     <p [innerHTML]="'<b>In Event binding, there is '+'Property binding</b>'"></p>
 </div><br>

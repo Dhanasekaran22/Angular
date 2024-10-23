@@ -12,7 +12,7 @@ export class CustomDirectiveDirective {
   }
 
   @HostListener('mouseleave') onMouseleave(){
-    this.changeBgColor(null);
+    this.changeBgColor('');                   //this.changeBgColor(null); it is also valid
   }
 
   private changeBgColor(color:string|null){

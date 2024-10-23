@@ -9,6 +9,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { CardDirective } from './card.directive';
 import { PipesComponent } from './pipes/pipes.component';
+import { FormSharingComponent } from './form-sharing/form-sharing.component';
+import { ListSharingComponent } from './list-sharing/list-sharing.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PipesComponent } from './pipes/pipes.component';
     DirectivesComponent,
     CustomDirectiveDirective,
     CardDirective,
-    PipesComponent
+    PipesComponent,
+    FormSharingComponent,
+    ListSharingComponent,
   ],
   imports: [
     BrowserModule,

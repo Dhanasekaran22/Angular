@@ -33,21 +33,23 @@ export class DataBindingComponent {
     this.count++;
   }
 
-  propertyBindingInEventBinding:string="";
-  isDisabledForEventBinding=true;
+  inputText:string="";
+  notNull=true;
+
   copyVariable:string="";
-
+  
   isValue(event:any){
-    this.propertyBindingInEventBinding=(event.target as HTMLInputElement).value;
+    this.inputText=(event.target as HTMLInputElement).value;
 
-    if(this.propertyBindingInEventBinding.length>1){
-      this.isDisabledForEventBinding=false;
+    if(this.inputText.length>1){
+      this.notNull=false;
     }
     else{
-      this.isDisabledForEventBinding= true;
+      this.notNull= true;
     }
   }
- 
+
+  
 }
 
 

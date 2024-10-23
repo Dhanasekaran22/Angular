@@ -1,0 +1,23 @@
+<div class="form-sharing-data">
+
+    <div>
+
+        <h2>Data Sharing Between Components</h2><br>
+        <!-- <h2 style="color:black">Using Input Decorator</h2> -->
+        <h2 style="color:black">Using Output Decorator</h2>
+        <h3>Forms </h3>
+        <form action="">
+            <label for="carName">Car Name</label>
+            <input type="text" name="car" [(ngModel)]="carName">
+            <button [disabled]=isNull() (click)="addCar()">Click to Add</button>
+        </form>
+
+        <!--using input Decorator-->
+        <!-- <app-list-sharing [carsInput]="cars"></app-list-sharing>  -->
+
+       
+    </div>
+
+
+
+</div>

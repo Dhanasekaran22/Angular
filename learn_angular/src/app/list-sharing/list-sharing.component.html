@@ -1,0 +1,39 @@
+<br>
+<div class="list">
+    <!--using Input Decorator-->
+    <!---
+    <div>
+        <h3>list</h3>
+        <div *ngIf="carList.length>0 then showCars else noData"></div>
+
+        <ng-template #showCars>
+            <ul>
+                <li *ngFor="let car of carList">{{car}}</li>
+            </ul>
+        </ng-template>
+
+        <ng-template #noData>
+            <p>No Data Available</p>
+        </ng-template>
+    </div>
+    -->
+
+    <!--using output Decorator-->
+    <app-form-sharing (carAdded)="carDataUpdated($event)"></app-form-sharing>
+    <div>
+        <h3>list</h3>
+        <div *ngIf="carList.length>0 then showCars else noData"></div>
+
+        <ng-template #showCars>
+            <ul>
+                <li *ngFor="let car of carList">{{car}}</li>
+            </ul>
+        </ng-template>
+
+        <ng-template #noData>
+            <p>No Data Available</p>
+        </ng-template>
+    </div>
+
+
+</div>
