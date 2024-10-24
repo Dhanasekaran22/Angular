@@ -20,9 +20,8 @@ export class DirectivesComponent {
   num=0;
   selectedOption:string="";
 
-  showMe=true;
-  show=false;
-
+  showMe=false;
+  
   showItems:boolean=false;
   items:string[]=["item-1","item-2","item-3"]
 

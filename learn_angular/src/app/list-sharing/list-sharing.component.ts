@@ -14,6 +14,7 @@ export class ListSharingComponent {
  //using OutPut Decorator
 
  carList:string[]=[];
+ 
  carDataUpdated(carsData:string[]){
   this.carList=carsData;
  }

@@ -26,7 +26,7 @@ export class DataBindingComponent {
 
   }
 
-  isDisabledForPropertyBinding=true;
+  isDisabled=true;
   count=0;
   
   onClick(){

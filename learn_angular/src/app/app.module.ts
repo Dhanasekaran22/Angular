@@ -11,6 +11,7 @@ import { CardDirective } from './card.directive';
 import { PipesComponent } from './pipes/pipes.component';
 import { FormSharingComponent } from './form-sharing/form-sharing.component';
 import { ListSharingComponent } from './list-sharing/list-sharing.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ListSharingComponent } from './list-sharing/list-sharing.component';
     PipesComponent,
     FormSharingComponent,
     ListSharingComponent,
+    LifeCycleHooksComponent,
   ],
   imports: [
     BrowserModule,

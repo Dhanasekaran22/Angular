@@ -58,6 +58,7 @@
             <div *ngSwitchCase="3">Three</div>
             <div *ngSwitchCase="4">Four</div>
             <div *ngSwitchCase="5">Five</div>
+            <div *ngSwitchDefault>Enter the Number 1 to 5</div>
         </div> <br>
 
 
@@ -80,7 +81,7 @@
     <div class="ngIf-directory">
         <h3>This is ngIf Directive</h3>
 
-        <label for="checkbox" value="showMe">Checked </label>
+        <label for="checkbox">Checked </label>
         <input type="checkbox" [(ngModel)]="showMe">
         <!-- <p *ngIf="showMe; else elseBlock">It is Ticked</p> --> <!--these twos are also valid-->
         <!-- <p *ngIf="!showMe">It is Unticked</p> -->
@@ -192,8 +193,8 @@
             </div>
 
             <div appCard>
-                <h4>Card title</h4>
-                <p>This is some content inside the card</p>
+                <h4 >Card title</h4>
+                <p >This is some content inside the card</p>
             </div><br><br>
 
         </div>

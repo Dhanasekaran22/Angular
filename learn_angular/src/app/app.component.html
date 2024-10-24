@@ -12,3 +12,17 @@
           
 <app-list-sharing></app-list-sharing>
 <!-- <app-form-sharing></app-form-sharing>   -->
+
+
+<!--ngOnChanges()-->
+
+<br>
+
+<h2 >Life Cycle Hooks</h2><br>
+<h3>App Component</h3>
+
+<label for="message">Message: </label>
+<input type="text" [(ngModel)]="message">
+
+<br>
+<app-life-cycle-hooks [msgFromApp]="message" ></app-life-cycle-hooks>
