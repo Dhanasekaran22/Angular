@@ -25,4 +25,13 @@
 <input type="text" [(ngModel)]="message">
 
 <br>
-<app-life-cycle-hooks [msgFromApp]="message" ></app-life-cycle-hooks>
+<!-- <app-life-cycle-hooks [msgFromApp]="message" ></app-life-cycle-hooks> -->
+
+<br><br>
+<h4>Example for ngDoCheck</h4>
+
+<h5>Task Manager</h5>
+<button (click)="markTaskAsCompleted(0)">Complete Task 1</button>
+<button (click)="markTaskAsCompleted(1)">Complete Task 2</button>
+
+<app-life-cycle-hooks [taskItems]="parentTaskList" ></app-life-cycle-hooks>
