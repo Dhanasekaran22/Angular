@@ -19,19 +19,26 @@
 <br>
 
 <h2 >Life Cycle Hooks</h2><br>
+<h2 style="color: gold;">Example of ngOnChanges() and ngInit()</h2>
+
+<!--ngOnDestroy-->
+<input type="checkbox" [(ngModel)]="isDisabled"> Disable Component 
+
 <h3>App Component</h3>
 
 <label for="message">Message: </label>
 <input type="text" [(ngModel)]="message">
 
 <br>
-<!-- <app-life-cycle-hooks [msgFromApp]="message" ></app-life-cycle-hooks> -->
 
-<br><br>
-<h4>Example for ngDoCheck</h4>
+<app-life-cycle-hooks [msgFromApp]="message" ></app-life-cycle-hooks>
+<br>
 
-<h5>Task Manager</h5>
-<button (click)="markTaskAsCompleted(0)">Complete Task 1</button>
-<button (click)="markTaskAsCompleted(1)">Complete Task 2</button>
 
-<app-life-cycle-hooks [taskItems]="parentTaskList" ></app-life-cycle-hooks>
+
+
+
+<!--ngOnDestroy-->
+<h2 style="color:gold;">Example of NgDoCheck and NgOnDestroy()</h2>
+<button (click)="addItem()">Add Items</button>
+<app-ng-do-check [childItems]="items" *ngIf="!isDisabled"></app-ng-do-check>

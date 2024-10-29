@@ -12,6 +12,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { FormSharingComponent } from './form-sharing/form-sharing.component';
 import { ListSharingComponent } from './list-sharing/list-sharing.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { NgDoCheckComponent } from './ng-do-check/ng-do-check.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.com
     FormSharingComponent,
     ListSharingComponent,
     LifeCycleHooksComponent,
+    NgDoCheckComponent,
   ],
   imports: [
     BrowserModule,

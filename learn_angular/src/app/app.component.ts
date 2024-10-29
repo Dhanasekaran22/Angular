@@ -12,19 +12,15 @@ export class AppComponent {
   message: string = "From Parent";
 
 
-  //ngDoCheck()
-  parentTaskList = [
-    { title: 'task1', completed: false },
-    { title: 'task2', completed: false },
-  ];
+  //ngDoCheck()                                                     
 
-
-  markTaskAsCompleted(index: number) {
-    this.parentTaskList[index].completed = true;         // Angular wont see this Change
-    console.log("clicked")                      // In a 'component' angular didn't see the change but when we console and see, the changes are made 
-                                                // but in angular we create new reference to make the angular note that it was changed
-
-    
+  items=[1,2,3];
+  addItem(){
+    // this.items.push(this.items.length+1);            //Angular wont see this Change
+    this.items=[...this.items,this.items.length+1];     //In a 'component' angular didn't see the change but when we console and see, the changes are made
+                                                        //but in angular we create new reference to make the angular note that it was changed
     
   }
+  
+  isDisabled=false;
 }

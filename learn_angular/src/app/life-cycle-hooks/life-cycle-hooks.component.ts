@@ -10,7 +10,7 @@ export class LifeCycleHooksComponent implements OnChanges,OnInit,DoCheck{
   //ngOnChanges()
 
   @Input() msgFromApp="";
-tasks: any;
+  tasks: any;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log("ngOnChanges Called!");
