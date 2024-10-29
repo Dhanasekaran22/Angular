@@ -19,10 +19,7 @@
 <br>
 
 <h2 >Life Cycle Hooks</h2><br>
-<h2 style="color: gold;">Example of ngOnChanges() and ngInit()</h2>
-
-<!--ngOnDestroy-->
-<input type="checkbox" [(ngModel)]="isDisabled"> Disable Component 
+<h2 style="color: gold;">Example of ngOnChanges() and ngInit() </h2><br>
 
 <h3>App Component</h3>
 
@@ -32,13 +29,13 @@
 <br>
 
 <app-life-cycle-hooks [msgFromApp]="message" ></app-life-cycle-hooks>
-<br>
-
-
-
-
+<br><br>
 
 <!--ngOnDestroy-->
-<h2 style="color:gold;">Example of NgDoCheck and NgOnDestroy()</h2>
+<input type="checkbox" [(ngModel)]="isDisabled"> Disable Child Component 
+<br>
+
+<!--ngOnDoCheck-->                                                                     <!--see the console in the " previous item " was null -->
+<h2 style="color:gold;">Example of NgDoCheck and ngOnDestroy()</h2><br>
 <button (click)="addItem()">Add Items</button>
-<app-ng-do-check [childItems]="items" *ngIf="!isDisabled"></app-ng-do-check>
+<app-ng-do-check *ngIf="!isDisabled" [childItems]="items"></app-ng-do-check>

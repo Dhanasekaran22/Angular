@@ -5,7 +5,7 @@ import { Component,Input,OnChanges, SimpleChanges,OnInit,DoCheck } from '@angula
   templateUrl: './life-cycle-hooks.component.html',
   styleUrls: ['./life-cycle-hooks.component.css']
 })
-export class LifeCycleHooksComponent implements OnChanges,OnInit,DoCheck{
+export class LifeCycleHooksComponent implements OnChanges,OnInit{
   
   //ngOnChanges()
 
@@ -28,15 +28,6 @@ export class LifeCycleHooksComponent implements OnChanges,OnInit,DoCheck{
     this.msgFromApp='initialize through ngOnInit()'     //clear example of ngOnInit()
   }
 
-  @Input() taskItems:any[]=[];
-
-  previousTaskItems: any[]=[];
-
-  ngDoCheck(): void {
-    if(this.taskItems!==this.previousTaskItems){
-      console.log("Tasks have Changed");
-      this.previousTaskItems=[...this.taskItems]     // new reference(spread operator) was created and angular note the changes
-      
-    }
-  }
+  
+  
 }

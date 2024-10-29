@@ -1,11 +1,11 @@
-import { Component,Input,DoCheck } from '@angular/core';
+import { Component,Input,DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-ng-do-check',
   templateUrl: './ng-do-check.component.html',
   styleUrls: ['./ng-do-check.component.css']
 })
-export class NgDoCheckComponent implements DoCheck{
+export class NgDoCheckComponent implements DoCheck,OnDestroy{
   @Input() childItems:number[]=[];
 
   private previousItems:number[]=[];
@@ -16,5 +16,8 @@ export class NgDoCheckComponent implements DoCheck{
     }
   }
 
-
+  ngOnDestroy(): void {
+    console.log("ngDestroy Called");
+    
+  }
 }
