@@ -13,6 +13,7 @@ import { FormSharingComponent } from './form-sharing/form-sharing.component';
 import { ListSharingComponent } from './list-sharing/list-sharing.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 import { NgDoCheckComponent } from './ng-do-check/ng-do-check.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NgDoCheckComponent } from './ng-do-check/ng-do-check.component';
     ListSharingComponent,
     LifeCycleHooksComponent,
     NgDoCheckComponent,
+    TemplateDrivenFormComponent,
   ],
   imports: [
     BrowserModule,
