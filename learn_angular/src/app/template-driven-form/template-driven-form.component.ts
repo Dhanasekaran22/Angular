@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class TemplateDrivenFormComponent {
 
+  countryList:Country[]=[
+    (new Country('1','India')),
+    (new Country('2','England')),
+    (new Country('3','France'))
+  ]
+
+}
+
+class Country{ 
+  id:string;
+  name:string;
+
+  constructor(Id:string,Name:string){
+    this.id=Id;
+    this.name=Name;
+  }
 }

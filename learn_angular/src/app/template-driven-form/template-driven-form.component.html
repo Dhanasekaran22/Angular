@@ -21,9 +21,12 @@
         <input type="checkbox" name="isMarried" id="isMarried">
 
         <label for="country">Country</label>
-        <select name="country" id="country"></select>
-        <option selected="" value=""></option>
+        <select name="country" id="country">
 
+            <option selected="" value="">Select</option>
+            <option  [ngValue]="country.id" *ngFor="let country of countryList">{{country.name}}</option>
+
+        </select>
         <button type="submit">Submit</button>
     </form>
 
