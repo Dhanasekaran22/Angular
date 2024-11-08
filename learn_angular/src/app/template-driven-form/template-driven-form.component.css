@@ -10,7 +10,8 @@ h2{
 .template-driven-forms {
     max-width: 400px;
     margin: 10px 50px;
-    padding: 15px;
+    padding: 25px;
+    
 }
 
 /* Style for labels */
@@ -22,6 +23,7 @@ label {
 /* Style for input fields and select dropdown */
 input[type="text"],
 input[type="email"],
+input[type="number"],
 select {
     width: 100%;
     padding: 8px;
@@ -54,4 +56,5 @@ button:active {
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 5px;
+
 }

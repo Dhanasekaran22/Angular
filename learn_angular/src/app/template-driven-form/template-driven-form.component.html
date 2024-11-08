@@ -3,30 +3,46 @@
 <h2>Forms</h2>
 <div class="template-driven-forms">
 
-    <form>
-        <label for="first_name">First Name </label>
-        <input type="text" id="first_name" name="first_name">
+    <form #formVariable="ngForm" (submit)="submitData(formVariable)">
 
+        <label for="first_name">First Name </label>                        <!--when the angular meets the form element in the component it creates the ngForm and there is form group instance-->
+        <input type="text" id="first_name" name="first_name" ngModel>      <!--we can view the form group instance -->
+                                                                           <!--it creates the form control instance by using ngModel-->
+                                 
         <label for="last_name">Last Name</label>
         <input type="text" id="last_name" name="last_name">
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" [(ngModel)]="initializeData.mail">
 
         <label for="gender">Gender</label>
-        <input type="radio" name="gender" id="gender" value="male">Male
-        <input type="radio" name="gender" id="gender" value="female">Female
+        <input type="radio" name="gender" id="gender" value="male" [(ngModel)]="initializeData.gender">Male
+        <input type="radio" name="gender" id="gender" value="female" [(ngModel)]="initializeData.gender">Female<br>
 
         <label style="display: inline-block; margin-right:5px;" for="isMarried">Married</label>
-        <input type="checkbox" name="isMarried" id="isMarried">
+        <input type="checkbox" name="isMarried" id="isMarried" [(ngModel)]="initializeData.isMarried">
 
         <label for="country">Country</label>
-        <select name="country" id="country">
+        <select name="country" id="country" [(ngModel)]="initializeData.country"> <!--we can give the ngModel in the select tag not option tag-->
 
             <option selected="" value="">Select</option>
-            <option  [ngValue]="country.id" *ngFor="let country of countryList">{{country.name}}</option>
+            <option [ngValue]="country.id" *ngFor="let country of countryList">{{country.name}}</option>
 
         </select>
+
+        <div ngModelGroup="address">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" ngModel>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" [(ngModel)]="initializeData.address.city">
+
+            <label for="pincode">Pincode</label>
+            <input type="number" id="pincode" name="pincode" ngModel>
+
+            
+        </div>
+
         <button type="submit">Submit</button>
     </form>
 
