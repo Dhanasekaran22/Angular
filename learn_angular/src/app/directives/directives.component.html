@@ -138,7 +138,9 @@
             'background-unchecked':!isChecked
 
         }">
-            Background Color Changes Here
+            <p *ngIf="!isChecked">Background Color Changes Here</p>
+            <p *ngIf="isChecked">Background Color Changed here </p>
+
         </div><br>
 
 
