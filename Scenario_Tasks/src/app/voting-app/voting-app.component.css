@@ -1,0 +1,30 @@
+div {
+    text-align: center;
+    
+  }
+  
+  .vote-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  span {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 4px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+  }
+  
+  button:hover {
+    background-color: #007bff;
+    color: white;
+   
+  }
+  

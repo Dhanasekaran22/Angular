@@ -1,0 +1,18 @@
+div {
+    text-align: center;
+    
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 5px 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

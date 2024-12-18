@@ -1,0 +1,12 @@
+<div>
+    <h2>Voting App</h2>
+    <div *ngFor="let option of options;let i=index" class="vote-item">
+        <span>{{option.name}}</span>
+        <button (click)="vote(i)">vote</button>
+        <span>votes:{{option.votes}}</span>
+    </div>
+    <div>
+        <button (click)="checkResult()">Calculate Result</button>
+        <p *ngIf="isTrue">The Winner is {{options[index].name}} </p>
+    </div>
+</div>
